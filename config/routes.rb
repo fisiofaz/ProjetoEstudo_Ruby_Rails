@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  #get 'home/index'
+  root to: 'home#index'
+
+  resources :authors
+  resources :categories
   resources :posts
   get "/articles", to: "articles#index"
 
